@@ -55,12 +55,12 @@ Bob,yyyyyy
 
 ### Step 3: Run the Streamlit App
 
-1. Save the provided Python script to a file (e.g., `notion_tracker_pro.py`).
+1. Save the provided Python script to a file (e.g., `multi_database_tracker.py`).
 2. Open a terminal and navigate to the directory containing the script.
 3. Run the Streamlit app by executing the following command:
 
 ```bash
-streamlit run notion_tracker_pro.py
+streamlit run multi_database_tracker.py
 ```
 
 ### Step 4: Enter API Key and Upload CSV File
