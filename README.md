@@ -6,7 +6,7 @@ A simple Streamlit app to view each subpage of a Notion page and display the mos
 ## 🚀 Live Demo
 
 **Try it instantly:**  
-👉 [https://notiontracker.streamlit.app](https://notiontracker.streamlit.app)
+👉 [https://notiontsync.streamlit.app](https://notiontsync.streamlit.app)
 
 ## Features
 
@@ -33,7 +33,7 @@ cd Notion_tracker
 ### 2. Install Requirements
 
 ```bash
-pip install -r requirement.txt
+pip install -r requirements.txt
 # If you run into issues, make sure you have aiohttp, streamlit, and requests installed:
 # pip install aiohttp streamlit requests
 ```
@@ -80,4 +80,4 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 [MIT](LICENSE)
 
-**Live Demo:** [https://notiontracker.streamlit.app](https://notiontracker.streamlit.app)
+**Live Demo:** [https://notiontracker.streamlit.app](https://notionsync.streamlit.app)
