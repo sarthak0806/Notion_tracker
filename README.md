@@ -1,90 +1,74 @@
+Here’s a revised and professional README for your repository [sarthak0806/Notion_tracker](https://github.com/sarthak0806/Notion_tracker), including a prominent live demo link and reflecting your latest features and structure[1]:
 
-# Notion Tracker Pro
+# Notion Subpages Latest Edited Time (IST)
 
-Welcome to **Notion Tracker Pro** — a powerful Streamlit app designed to help you track tasks across multiple Notion databases with ease. Fetch, view, and download tasks by user with just a few clicks!
+A simple Streamlit app to view each subpage of a Notion page and display the most recent edit time (in Indian Standard Time) among all its nested children (pages and databases).
+
+## 🚀 Live Demo
+
+**Try it instantly:**  
+👉 [https://notiontracker.streamlit.app](https://notiontracker.streamlit.app)
 
 ## Features
 
-- Fetch tasks from different Notion databases for multiple users.
-- View task data in an organized, tabular format, with details like Task Name, Assignee, Due Date, and Last Updated timestamp.
-- Download task data as a CSV file for further analysis.
+- **Secure:** No API keys or secrets are stored; users provide their own Notion API key and Page ID.
+- **Easy to use:** Enter your credentials and view results in a clean, sortable table.
+- **Time zone conversion:** All times are shown in IST (Indian Standard Time).
+- **No installation required:** Deployable on [Streamlit Cloud](https://streamlit.io/cloud) or run locally.
 
-## Requirements
+## Quick Start
 
-Before running the app, ensure you have the following libraries installed:
-
-### Install Dependencies:
-
-1. **Streamlit**: For building the interactive web application.
-2. **Requests**: To make HTTP requests to the Notion API.
-3. **Pandas**: For handling and displaying data in tabular format.
-4. **Datetime** and **pytz**: For handling time zones and formatting timestamps.
-
-### Install Libraries:
-
-To install the necessary libraries, run:
+### 1. Clone the Repository
 
 ```bash
-pip install streamlit requests pandas pytz
-````
-
-## How to Run
-
-### Step 1: Set Up Your Notion API Key
-
-To fetch data from Notion, you'll need a Notion integration API key. Follow these steps to get your API key:
-
-1. Go to [Notion Developers](https://www.notion.so/my-integrations).
-2. Create a new integration and generate an API key.
-3. Copy the API key for use in the app.
-
-### Step 2: Prepare the CSV File
-
-The app requires a CSV file containing two columns:
-
-* `user`: The name or identifier of the user.
-* `database_id`: The ID of the Notion database to fetch tasks from.
-
-Sample CSV structure:
-
-```
-user,database_id
-Alice,xxxxxx
-Bob,yyyyyy
+git clone https://github.com/sarthak0806/Notion_tracker.git
+cd Notion_tracker
 ```
 
-### Step 3: Run the Streamlit App
-
-1. Save the provided Python script to a file (e.g., `multi_database_tracker.py`).
-2. Open a terminal and navigate to the directory containing the script.
-3. Run the Streamlit app by executing the following command:
+### 2. Install Requirements
 
 ```bash
-streamlit run multi_database_tracker.py
+pip install -r requirement.txt
 ```
 
-### Step 4: Enter API Key and Upload CSV File
+### 3. Run the App Locally
 
-1. Open the app in your browser (it will open automatically).
-2. Enter your Notion API key in the provided input box.
-3. Upload the CSV file with user and database IDs.
-4. Click "Fetch Tasks" to retrieve the task data for all users.
+```bash
+streamlit run final_check_2.py
+```
 
-The app will display the task data in a table, and you can download it as a CSV file.
+## Usage
 
-## Functionality
+1. **Obtain your Notion Integration Token (API Key):**  
+   [Create an integration](https://www.notion.so/my-integrations) and copy the secret.
+2. **Share your Notion page with the integration** (so it has access).
+3. **Copy the Notion Page ID** from the URL of your page.
+4. **Enter your API Key and Page ID** in the app and click "Fetch Subpages".
+5. **View the table** of subpages and their latest edited times (in IST).
 
-* **API Key Input**: Enter your Notion API key to authenticate and fetch data from your Notion workspace.
-* **CSV Upload**: Upload a CSV file containing `user` and `database_id` columns for each user and their associated Notion databases.
-* **Fetch Tasks**: Click the button to fetch the tasks associated with each user’s database.
-* **Data Table**: View tasks in an easy-to-read table format showing Task Name, Assignee, Due Date, and Last Updated timestamp.
-* **Download CSV**: Download the task data as a CSV file.
+## Security
 
-## Important Notes
+- **No secrets are stored or logged.**
+- Each user provides their own Notion API key and Page ID.
+- **Never share your API key publicly.**
 
-* Ensure that the Notion databases you are accessing are shared with your integration for proper access permissions.
-* The app fetches tasks based on the database and user provided in the CSV file. If the database ID is invalid or the user does not have tasks, the app will notify you.
-* The time in the "Last Updated" column is adjusted to Indian Standard Time (IST).
+## Example Table
 
+| Page Name                 | Page ID                                   | Latest Edited (IST)     |
+|---------------------------|-------------------------------------------|-------------------------|
+| Sarthak Modanwal Worksheet| 20bdcb16-6c13-806a-bfc9-e910f6c3f2b7      | 2025-07-02 13:40:00 IST |
+| Tvisha WorkSheet          | 223dcb16-6c13-8031-889f-f31f0a937d57      | 2025-07-01 12:08:00 IST |
 
+## Contributing
 
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+[MIT](LICENSE)
+
+**Live Demo:** [https://notiontracker.streamlit.app](https://notiontracker.streamlit.app)
+
+If you want a badge or screenshot added, just let me know![1]
+
+[1] https://github.com/sarthak0806/Notion_tracker
